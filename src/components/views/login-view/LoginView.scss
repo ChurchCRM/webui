@@ -1,0 +1,77 @@
+/* MOBILE STYLES */
+
+.main-content {
+    padding: 20px;
+    width: calc(100% - 20px*2);
+    height: calc(100% - 20px*2);
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+
+form {
+    width: 100%;
+    margin: 0% auto;
+}
+
+.card {
+    width: calc(100% - 40px);
+    background-color: white;
+    text-align: center;
+
+    h4 {
+        font-size: 18px;
+    }
+}
+
+.col-md-12 {
+    overflow: hidden !important;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+
+    img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+::ng-deep mat-form-field {
+    width: 100% !important;
+}
+
+::ng-deep .mat-form-field-label-wrapper label span {
+    font-size: 16px;
+    font-family: MR;
+}
+
+button {
+    width: 100% !important;
+}
+
+.btn-round {
+    margin-bottom: 30px !important;
+}
+
+.red {
+    color: #f44336;
+}
+
+.mg-10 {
+    margin-top: 10px;
+}
+
+a {
+    margin-bottom: 20px * 2;
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 540px) {   
+    form {
+        width: 500px;
+    }
+}
