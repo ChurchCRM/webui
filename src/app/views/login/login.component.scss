@@ -1,7 +1,22 @@
+@import '../../../styles-variables.scss';
+
+// MOBILE STYLES
+
+.main-content {
+    padding: $padding;
+    background-color: #3c8dbb;
+    width: calc(100% - $padding*2);
+    height: calc(100% - $padding*2);
+}
+
+form {
+    max-width: calc(100% - $padding*2);
+}
+
 .card {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: white;
+    text-align: center;
 
     h4 {
         font-size: 18px;
@@ -18,16 +33,11 @@
     text-align: center;
 
     img {
-        width: 100px;
-        height: auto;
+        width: 100px !important;
+        height: 100px !important;
     }
 }
 
-form {
-    padding: 30px;
-    max-width: 450px !important;
-    margin: 0% auto;
-}
 
 ::ng-deep mat-form-field {
     width: 100% !important;
@@ -52,4 +62,8 @@ button {
 
 .mg-10 {
     margin-top: 10px;
+}
+
+a {
+    color: white;
 }
