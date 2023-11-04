@@ -34,12 +34,12 @@ class LoginView extends Component {
               Login
             </Button>
           </div>
-          <Button variant="contained" className="secondary-main space-bottom">
-            Create new account
-          </Button>
-          <Button variant="contained" className="secondary-dark">
-            Access recover
-          </Button>
+          <div className="space-bottom">
+            <a href="">Create New Account</a>
+          </div>
+          <div className="space-bottom">
+            <a href="">Access Recovery</a>
+          </div>
         </form>
       </div>
     );
