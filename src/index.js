@@ -3,8 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import createTheme from '@mui/material/styles/createTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const theme = createTheme({
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1: 'h1',
+          h2: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6',
+          subtitle1: 'h2',
+          subtitle2: 'h3',
+          body1: 'span',
+          body2: 'label',
+        },
+      },
+    },
+  },
+});
 
 root.render(
   <React.StrictMode>

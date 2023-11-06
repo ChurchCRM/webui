@@ -1,7 +1,11 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
 * {
-  color: #000;
-  font-size: 16pt;
-  font-family: "Montserrat", sans-serif !important;
+  color: #495057;
+  font-family: "Roboto" !important;
 }
 
 .primary-main {
@@ -52,7 +56,6 @@ body {
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -63,6 +66,10 @@ h1 {
 h2 {
   margin-top: 0px;
   font-size: 24pt;
+}
+
+.title, .title label {
+  font-size: 29.4px !important;
 }
 
 a {
