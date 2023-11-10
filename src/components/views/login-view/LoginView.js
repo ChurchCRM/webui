@@ -9,6 +9,7 @@ import {
   FormGroup,
   FormControlLabel,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 class LoginView extends Component {
   render() {
@@ -55,7 +56,7 @@ class LoginView extends Component {
             </Button>
           </div>
           <div className="space-bottom">
-            <a href="/">I forgot my password</a>
+            <Link to="/forgot-password">I forgot my password</Link>
           </div>
         </form>
       </div>
