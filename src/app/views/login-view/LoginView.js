@@ -13,12 +13,8 @@ import { Link } from "react-router-dom";
 
 class LoginView extends Component {
   render() {
-    const label = {
-      inputProps: { "aria-label": "Remember Me", span: "Remember Me" },
-    };
-
     return (
-      <div className="main-content">
+      <div className="main-content"z>
         <form>
           <div className="card space-bottom">
             <div className="center space-bottom">
@@ -45,10 +41,7 @@ class LoginView extends Component {
                 className="field space-bottom"
               />
               <FormGroup>
-                <FormControlLabel
-                  control={<Checkbox />}
-                  label="Remember Me"
-                />
+                <FormControlLabel control={<Checkbox />} label="Remember Me" />
               </FormGroup>
             </div>
             <Button variant="contained" className="primary-main space-top">
