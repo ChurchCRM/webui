@@ -1,6 +1,22 @@
+.view {
+    padding: 20px 20px 20px 20px;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 ::ng-deep mat-card {
     max-width: 400px;
-    padding-bottom: 20px;
+    margin: auto !important;
+
+    mat-card-title,
+    mat-card-subtitle {
+        padding-bottom: 15px;
+        text-align: left;
+    }
     
     .column {
         align-items: center;
@@ -14,6 +30,7 @@
 
     mat-card-actions {
         padding-right: 16px !important;
+        text-align: left;
     }
 
     mat-checkbox {
@@ -21,7 +38,12 @@
     }
 
     button {
-        width: 100px;
+        width: 200px;
     }
 
+}
+
+.link {
+    margin: 20px;
+    text-align: left;
 }
