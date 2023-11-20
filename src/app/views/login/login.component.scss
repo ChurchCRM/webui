@@ -17,6 +17,14 @@
         padding-bottom: 15px;
         text-align: left;
     }
+
+    mat-card-title {
+        font-size: 25pt !important;
+    }
+    
+    mat-card-subtitle {
+        font-size: 14pt !important;
+    }
     
     .column {
         align-items: center;
