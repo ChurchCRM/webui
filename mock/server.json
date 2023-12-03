@@ -1,0 +1,13 @@
+{
+    "login": {
+        "title": "John McCarthy",
+        "email": "john@email.com",
+        "username": "johnmcc",
+        "token": "krtyhgfaf56e4t8seh652d4u6j8fdgsfaf45dhjf1g4bhf65jhdf5dhgj4gz"
+    },
+    "forgot-password": {
+        "id": 1,
+        "title": "John McCarthy",
+        "password": "123456"
+    }
+}

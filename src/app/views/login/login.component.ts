@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subject, takeUntil } from 'rxjs';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
@@ -7,14 +8,15 @@ import { LoginService } from 'src/app/services/login/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnDestroy {
+
+  private viewOpened: Subject<any> = new Subject();
+  formInvalid: boolean = true;
 
   form: FormGroup = new FormGroup({
-    email: new FormControl('', Validators.email),
-    password: new FormControl(''),
+    email: new FormControl('john@email.com', [Validators.required, Validators.email]),
+    password: new FormControl('123456', [Validators.required, Validators.minLength(6)]),
   });
-
-  formInvalid: boolean = true;
 
   constructor(
     private loginService: LoginService
@@ -22,17 +24,25 @@ export class LoginComponent {
     this.validateBuilder();
   }
 
+  ngOnDestroy(): void {
+    console.log('View destroyed');
+    this.viewOpened.complete();
+  }
+
   validateBuilder(): void {
-    this.form.valueChanges.subscribe({
+    this.form.valueChanges.pipe(
+      takeUntil(this.viewOpened)
+    ).subscribe({
       next: (ele: any) => {
-        if (ele.password.length < 6) this.form.setErrors({invalid: true});
         this.formInvalid = this.form.invalid;
       }
     });
   }
 
   sendForm(): void {
-    this.loginService.sendData().subscribe({
+    this.loginService.sendData().pipe(
+      takeUntil(this.viewOpened)
+    ).subscribe({
       next: (res: any) => {
         console.log(res);
       }
